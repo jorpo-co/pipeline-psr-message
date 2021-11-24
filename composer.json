@@ -1,0 +1,41 @@
+{
+    "name": "jorpo/pipeline-psr-message",
+    "description": "Middleware pipeline for PSR Http Message",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "John Porter",
+            "email": "john@designermonkey.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {
+        "jorpo/pipeline": "@dev",
+        "php": "^8.0",
+        "psr/http-message": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jorpo\\Pipeline\\Middleware\\": [
+                "src"
+            ]
+        }
+    },
+    "require-dev": {
+        "nyholm/psr7": "^1.4",
+        "phpunit/phpunit": "^9.0",
+        "vimeo/psalm": "^4.13"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jorpo\\Pipeline\\Middleware\\": [
+                "tests"
+            ]
+        }
+    }
+}
